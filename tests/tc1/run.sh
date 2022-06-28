@@ -1,0 +1,1 @@
+../../bin/coolcomp --input=input.cl --output=output.cl

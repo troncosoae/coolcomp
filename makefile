@@ -23,5 +23,9 @@ run:
 
 .PHONY: clean
 clean:
-	rm $(BIN_DIR)/*
-	rm $(OBJ_DIR)/*
+	rm $(BIN_DIR)/coolcomp
+	rm $(OBJ_DIR)/*.o
+
+.PHONY: run_tests
+run_tests:
+	cd tests; ./run.sh; cd ..
