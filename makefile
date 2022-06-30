@@ -14,7 +14,7 @@ SRC_DIR = $(HOME_DIR)/src
 default: build_src
 
 .PHONY: build_src
-build_src:
+build_src: $(SRC_DIR)/makefile
 	$(MAKE) -C $(SRC_DIR)
 
 .PHONY: run
