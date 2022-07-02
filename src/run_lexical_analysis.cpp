@@ -4,6 +4,7 @@
 #include <boost/program_options.hpp>
 #include <boost/regex.hpp>
 #include "lexical_analysis.h"
+#include "file_management.h"
 
 
 int main(int argc, char *argv[])
@@ -45,6 +46,10 @@ int main(int argc, char *argv[])
     }
     else 
         std::cout << "inputs instuficient" << std::endl;
+
+    LexicalAnalysis::FileManager<std::ifstream> inputFile(input_file_path);
+
+
 
     return 0;    
 

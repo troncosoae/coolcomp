@@ -30,7 +30,7 @@ all: $(TARGET) $(LEXICAL_ANALYSIS_EXE)
 $(TARGET): main.cpp $(LEXICAL_ANALYSIS_OBJ) $(INC_DIR) $(BOOST_PROGRAM_OPTIONS_A)
 	$(COMPILE) -I $(INC_DIR) -o $(TARGET) main.cpp $(LEXICAL_ANALYSIS_OBJ) $(BOOST_PROGRAM_OPTIONS_A)
 
-$(LEXICAL_ANALYSIS_OBJ): lexical_analysis.cpp lexical_analysis.h $(BOOST_REGEX_A)
+$(LEXICAL_ANALYSIS_OBJ): lexical_analysis.cpp lexical_analysis.h file_management.h $(BOOST_REGEX_A)
 	$(COMPILE) -o $(LEXICAL_ANALYSIS_OBJ) -c lexical_analysis.cpp $(BOOST_REGEX_A)
 
 $(LEXICAL_ANALYSIS_EXE): run_lexical_analysis.cpp $(LEXICAL_ANALYSIS_OBJ) $(INC_DIR) $(BOOST_REGEX_A)

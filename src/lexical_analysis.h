@@ -3,7 +3,10 @@
 
 #include <fstream>
 #include <string>
+#include <type_traits>
 #include <boost/regex.hpp>
+
+#include "file_management.h"
 
 namespace LexicalAnalysis
 {
@@ -29,11 +32,6 @@ class Scanner
 
     void analyzeLine(const std::string& line);    
 };
-
-
-/* To manage opening and closing files easily */
-class FileManager
-{};
 
 
 class LexicalAnalyzer
@@ -63,6 +61,6 @@ private:
 
 };
 
-}
+} // LexicalAnalysis
 
-#endif
+#endif // LEXICAL_ANALYSIS_H
